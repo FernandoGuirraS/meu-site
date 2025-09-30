@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Guirra DataTech</title>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            html { scroll-behavior: smooth; }
+            body { font-family: 'Roboto', sans-serif; }
+            @layer utilities {
+              .fade-in-up { animation: fadeInUp 1.5s ease forwards; }
+              .fade-in-down { animation: fadeInDown 2s ease-out; }
+              @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(40px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+              @keyframes fadeInDown {
+                from { opacity: 0; transform: translateY(-40px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+            }
+        </style>
+    </head>
+
+    <body class="bg-[#111] text-[#e0e0e0] leading-relaxed overflow-x-hidden">
+
+        <header class="relative h-screen flex justify-center items-center bg-[#111] overflow-hidden">
+            <canvas id="mathCanvas" class="absolute inset-0 w-full h-full z-0"></canvas>
+            <div class="text-center fade-in-down z-10 space-y-6">
+                <img src="logo_gd.png" alt="Guirra Logo" class="w-[36rem] max-w-full h-auto mx-auto">
+                <h1 class="text-4xl font-orbitron text-[#c6ff00]">Onde dados viram direção</h1>
+            </div>
+        </header>
+
+        <section class="max-w-5xl mx-auto px-6 py-48 fade-in-up">
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-8 flex-1 hover:scale-[1.03] transition duration-300">
+                    <h2 class="text-2xl font-orbitron text-[#c6ff00] mb-4 text-center">De planilhas ao poder dos dados</h2>
+                    <p class="text-[#ccc]">Não perca horas tentando entender relatórios confusos. Atuação com criação de dashboards inteligentes para você tomar decisões certas, no tempo certo.</p>
+                </div>
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-8 flex-1 hover:scale-[1.03] transition duration-300">
+                    <h2 class="text-2xl font-orbitron text-[#c6ff00] mb-4 text-center">Do caos ao controle</h2>
+                    <p class="text-[#ccc]">Dê um basta nos processos complicados. Sistemas web feitos sob medida para transformar rotina travada em produtividade real.</p>
+                </div>
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-8 flex-1 hover:scale-[1.03] transition duration-300">
+                    <h2 class="text-2xl font-orbitron text-[#c6ff00] mb-4 text-center">Do papel ao clique</h2>
+                    <p class="text-[#ccc]">Não deixe informações importantes no papel. Construímos apps web para acompanhar tudo em tempo real, no desktop e no celular.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-6 py-48 fade-in-up">
+            <h2 class="text-3xl font-orbitron text-[#c6ff00] mb-12 text-center">Nossas Atividades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">🔍</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Monitoramento de Dados</h3>
+                        <p class="text-[#ccc]">Soluções inteligentes para acompanhar, organizar e interpretar o fluxo de dados em tempo real.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">📊</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Visualização Interativa</h3>
+                        <p class="text-[#ccc]">Transformamos dados em painéis visuais que facilitam decisões rápidas e estratégicas.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">🖥️</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Desenvolvimento Web</h3>
+                        <p class="text-[#ccc]">Criação de sistemas e páginas personalizadas para automatizar processos e otimizar o seu fluxo.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">⚙️</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Automação de Processos</h3>
+                        <p class="text-[#ccc]">Reduza tarefas repetitivas com soluções automatizadas que aumentam produtividade e reduzem erros.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">🌐</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Sites & Marca</h3>
+                        <p class="text-[#ccc]">Construção de sites modernos e identidade visual para lançar ou fortalecer sua presença digital.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex gap-4 items-start hover:scale-[1.03] transition duration-300">
+                    <div class="text-4xl text-[#c6ff00]">✅</div>
+                    <div>
+                        <h3 class="font-orbitron text-xl mb-2 text-[#fff]">Otimização de Tarefas</h3>
+                        <p class="text-[#ccc]">Melhore sua rotina com automações simples, planilhas inteligentes e integrações eficazes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto my-6 px-6 py-48 fade-in-up">
+            <h2 class="text-3xl font-orbitron text-[#c6ff00] mb-6 text-center">Serviços Realizados</h2>
+            <div class="space-y-16">
+                <div class="relative fade-in-up">
+                    <img src="servico1.jpg" alt="Serviço 1" class="w-full md:w-1/2 object-cover opacity-90 rounded-lg">
+                    <div class="absolute inset-y-1/4 left-1/2 transform -translate-x-1/2 p-8 bg-[#0f0f0fcc] rounded-lg">
+                        <h3 class="text-2xl font-orbitron text-[#c6ff00] mb-2">Implantação de Dashboards</h3>
+                        <p class="text-[#ccc]">Dashboard customizado para visualização e análise estratégica de dados em tempo real.</p>
+                    </div>
+                </div>
+
+                <div class="relative fade-in-up">
+                    <img src="servico2.jpg" alt="Serviço 2" class="w-full md:w-1/2 object-cover opacity-90 rounded-lg">
+                    <div class="absolute inset-y-1/4 left-1/2 transform -translate-x-1/2 p-8 bg-[#0f0f0fcc] rounded-lg">
+                        <h3 class="text-2xl font-orbitron text-[#c6ff00] mb-2">Sistemas de Relatórios</h3>
+                        <p class="text-[#ccc]">Sistemas integrados para geração de relatórios precisos e automatizados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-6 py-48 fade-in-up my-16">
+            <h2 class="text-3xl font-orbitron text-[#c6ff00] mb-8 text-center">Conectando Inovação com Decisão</h2>
+            <p class="text-center text-[#bbb] text-lg max-w-3xl mx-auto">A Guirra DataTech transforma dados em direção. Desenvolvemos soluções inteligentes, visuais e focadas na tomada de decisão. Acreditamos que dados devem trabalhar a favor das pessoas — por isso criamos sistemas, dashboards e automações que descomplicam processos, economizam tempo e ampliam resultados. Mais do que tecnologia, entregamos clareza.</p>
+        </section>
+
+        <section class="bg-[#1b1b1b] px-6 py-48 fade-in-up">
+            <h2 class="text-3xl font-orbitron text-[#c6ff00] mb-10 text-center">Contato</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <a href="https://wa.me/5527997879439?text=Olá%2C+Guirra+DataTech%21+Gostaria+de+saber+mais+sobre+seus+projetos+ou+como+pode+nos+ajudar%3F" target="_blank" rel="noopener noreferrer" class="block">
+                <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex items-center gap-4 hover:scale-[1.03] transition duration-300">
+                    <div class="text-[#c6ff00]">
+                        <svg fill="#FFFFFF" width="32" height="32" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg" class="jam jam-whatsapp">
+                            <path d='M9.516.012C4.206.262.017 4.652.033 9.929a9.798 9.798 0 0 0 1.085 4.465L.06 19.495a.387.387 0 0 0 .47.453l5.034-1.184a9.981 9.981 0 0 0 4.284 1.032c5.427.083 9.951-4.195 10.12-9.58C20.15 4.441 15.351-.265 9.516.011zm6.007 15.367a7.784 7.784 0 0 1-5.52 2.27 7.77 7.77 0 0 1-3.474-.808l-.701-.347-3.087.726.65-3.131-.346-.672A7.62 7.62 0 0 1 2.197 9.9c0-2.07.812-4.017 2.286-5.48a7.85 7.85 0 0 1 5.52-2.271c2.086 0 4.046.806 5.52 2.27a7.672 7.672 0 0 1 2.287 5.48c0 2.052-.825 4.03-2.287 5.481z'/>
+                            <path d='M14.842 12.045l-1.931-.55a.723.723 0 0 0-.713.186l-.472.478a.707.707 0 0 1-.765.16c-.913-.367-2.835-2.063-3.326-2.912a.694.694 0 0 1 .056-.774l.412-.53a.71.71 0 0 0 .089-.726L7.38 5.553a.723.723 0 0 0-1.125-.256c-.539.453-1.179 1.14-1.256 1.903-.137 1.343.443 3.036 2.637 5.07 2.535 2.349 4.566 2.66 5.887 2.341.75-.18 1.35-.903 1.727-1.494a.713.713 0 0 0-.408-1.072z'/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-orbitron text-base text-[#fff]">WhatsApp</h3>
+                        <p class="text-sm text-gray-400">Clique para conversar</p>
+                    </div>
+                </div>
+              </a>
+
+                <a href="https://www.linkedin.com/in/fernandoguirra/" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex items-center gap-4 hover:scale-[1.03] transition duration-300">
+                        <div class="text-[#c6ff00]">
+                            <svg fill="#FFFFFF" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                                <path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-orbitron text-base text-[#fff]">LinkedIn</h3>
+                            <p class="text-sm text-gray-400">Conecte-se comigo</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mailto:guirradatatec@gmail.com" class="block">
+                    <div class="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 flex items-center gap-4 hover:scale-[1.03] transition duration-300">
+                        <div class="text-[#c6ff00]">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm3.519 0L12 11.671 18.481 6H5.52zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16V7.329z" fill="#FFFFFF"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-orbitron text-base text-[#fff]">E‑mail</h3>
+                            <p class="text-sm text-gray-400">guirradatatec@gmail.com</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-[#111] text-center py-6 text-sm text-[#777]">
+            <p>© 2025 Guirra DataTech. Todos os direitos reservados.</p>
+        </footer>
+
+        <script>
+            const canvas = document.getElementById('mathCanvas');
+            const ctx = canvas.getContext('2d');
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+            function drawEquation(t) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.strokeStyle = '#c6ff0044';
+                ctx.lineWidth = 1.5;
+                [120,80].forEach(amp => {
+                    ctx.beginPath();
+                    for (let x=0; x<canvas.width; x++) {
+                        let y = canvas.height/2 + amp * Math.sin((x+t)*0.01);
+                        x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+                }
+                ctx.stroke();
+            });
+            [60,30].forEach(amp => {
+                ctx.beginPath();
+                for (let x=0; x<canvas.width; x++) {
+                    let y = canvas.height/2 + amp * Math.cos((x+t)*0.008);
+                    x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+                }
+                ctx.stroke();
+            });
+                requestAnimationFrame(() => drawEquation(t+1));
+            }
+            drawEquation(0);
+        </script>
+
+    </body>
+</html>
